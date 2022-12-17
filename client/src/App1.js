@@ -34,7 +34,7 @@ export default function App() {
 
   const touchData = useCallback(() => {
 
-    fetch(/recipe)
+    fetch("/recipe")
       .then((response) => response.json())
       .then((incomingData) => {
         console.log(incomingData)
