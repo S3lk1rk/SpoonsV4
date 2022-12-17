@@ -15,7 +15,7 @@ app.use(express.urlencoded({extended: false }));
 const router = require('./routes/routes');
 app.use('/recipe', router);
 
-app.use(express.static(path.resolve(dirname, 'client','build')));
+app.use(express.static(path.resolve(__dirname, 'client','build')));
 
 const PORT = process.env.PORT || 3001;
 
@@ -28,6 +28,6 @@ app.listen(PORT, () => {
 });
 
 app.get('*', function (req, res) {
-  const index = path.join(dirname, 'client','build', 'index.html');
+  const index = path.join(__dirname, 'client','build', 'index.html');
   res.sendFile(index);
 });
