@@ -42,9 +42,8 @@ const Review = ({ food }) => {
                 </div>
                 <button onClick={() => a()} > Add Review </button>
                 <div class="reviews">
-                <p>linebreak</p>
                 {food.preview.map((item,i) =>{
-                    return <div>{item.name}{item.rating}{item.comment}</div>
+                    return <div>Reviewer name: {item.name}<br></br>Review score: {item.rating}/10<br></br>Comment: {item.comment}</div>
                     
                 })}
                 </div>
