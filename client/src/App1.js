@@ -30,11 +30,11 @@ export default function App() {
     review: [],
     menu: [],
     shopping: [],
-    preview: {
+    preview: [{
       name: "",
       rating: "",
       comment: "",
-    },
+    }],
   }]);
 
   const touchData = useCallback(() => {
