@@ -1,14 +1,13 @@
 import React from "react";
 import Accordion from "react-bootstrap/Accordion";
-import Item from "./Item";
+import Item from "./BaseLayerItems";
 import Menuitem from "./SavedRecipeFormat"
 import Shoppingitem from "./MyShoppingItemFormat"
 
 const MenuItems = (params) => {
   const items = params.items
   return (
-    <Accordion style={{width:50+'%'}}>
-      <p>show me the money</p>
+    <Accordion style={{ width: 50 + '%' }}>
       {items.map((food, index) => {
         return (
           <Accordion.Item eventKey={index} key={index}>

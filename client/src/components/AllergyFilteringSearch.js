@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MenuItems from "./MenuItems";
+import MenuItems from "./ControllingMenuDisplay";
 
 function Search(params) {
   const details = params.details

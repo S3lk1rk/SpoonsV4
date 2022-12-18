@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
-import Nutrition from "./Nutrition";
-import BarChart from "./NutritionChart";
+import Nutrition from "./NutFormat";
+import BarChart from "./NutCartography";
 
 const FetchData = ({ query }) => {
   const [nutrition, setNutrition] = useState({

@@ -1,13 +1,18 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StyledLayout from "./components/StyledLayout";
-import Home from "./components/Home";
-import CategoryFilter from "./components/CategoryFilter"
-import Item from "./components/Item";
+import Home from "./components/Homepage";
+import CategoryFilter from "./components/AllergyFilteringSearch"
+import Item from "./components/BaseLayerItems";
 import NoPage from "./components/A404Page";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MenuFilter from "./components/SavedListShow"
 import ShoppingFilter from "./components/MyShopShow"
+
+import '@shoelace-style/shoelace/dist/themes/light.css';
+import { setBasePath } from '@shoelace-style/shoelace/dist/utilities/base-path';
+
+
 
 export default function App() {
 

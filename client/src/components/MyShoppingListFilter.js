@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import MenuItems from "./MenuItems";
+import MenuItems from "./ControllingMenuDisplay";
 
 function Search(params) {
   const details = params.details
@@ -18,14 +18,13 @@ function Search(params) {
   });
 
   useEffect(() => {
-      setDisplayData(combinedFiltered)
-    })
+    setDisplayData(combinedFiltered)
+  })
 
   return (
     <div>
-      <h3>Expand to view the ingredients to purchase</h3>
-      <p>Expand the accordion to view the ingredients to purchase</p>
-      <p>or to remove from the list</p>
+      <h3>List of recipes and their required ingredients</h3>
+      <p>when removing from the list it will not automatically disappear, however to refresh navigate home then back to this page</p>
       {displayData && <>
         {params.type === "inshoplist" && <MenuItems type={"inshoplist"} items={displayData} />}
       </>}

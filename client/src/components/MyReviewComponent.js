@@ -26,7 +26,6 @@ const Review = ({ food }) => {
     console.log(food.preview)
     return (
         <div className="cam-control">Review
-
                 <p>Please leave a review</p>
                 <div class="namereview">
                 <p>Name</p>

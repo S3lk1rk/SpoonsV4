@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import Accordion from 'react-bootstrap/Accordion';
 import FetchNutrition from "./FetchNutrition";
-import Review from "./Review";
+import Review from "./MyReviewComponent";
 
 const Item = ({ food }) => {
 const [OpenNutrition, SetOpenNutrition] = useState(false);
