@@ -3,16 +3,23 @@ import MenuItems from "./MenuItems";
 
 function Search(params) {
   const details = params.details
+
+  console.log(details)
+
   const [searchField, setSearchField] = useState("");
   const [filterDairy, setFilterDairy] = useState(false);
   const [filterGluten, setFilterGluten] = useState(false);
   const [filterNuts, setFilterNuts] = useState(false);
   const [displayData, setDisplayData] = useState("");
+  const [descriptionField, setDescriptionField] = useState("");
 
-  const filtered = details.filter((entry) => {
-    return entry.name.toLowerCase().includes(searchField.toLowerCase());
-  });
-
+const combinedFiltered = details.filter((entry) => {
+  console.log(entry)
+  return entry?.name?.toLowerCase().includes(searchField.toLowerCase()) &&
+  entry?.ingredients?.some((item) => { return item?.food_ingredient?.includes(descriptionField)})
+  
+});
+  
   const dairyData = (data) => {
     return data.filter((entry) => {
       return !entry.allergens.includes("Dairy")
@@ -32,13 +39,10 @@ function Search(params) {
 
   }
 
-  
-
-  let result = filtered
-
   useEffect(() => {
+    let result = combinedFiltered;
     if (!filterDairy && !filterGluten && !filterNuts) {
-      setDisplayData(filtered)
+      setDisplayData(combinedFiltered)
     }
 
     else {
@@ -54,7 +58,7 @@ function Search(params) {
       }
       setDisplayData(result)
     }
-  }, [searchField, filterDairy, filterGluten, filterNuts])
+  }, [searchField, descriptionField, filterDairy, filterGluten, filterNuts])
 
 
   return (
@@ -62,9 +66,18 @@ function Search(params) {
       <div> <input
         className="form-control"
         type="text"
-        placeholder="To start searching type here..."
+        placeholder="Search ..."
         onChange={(e) => setSearchField(e.target.value)}
       /> </div>
+
+<div>
+  <input
+    className="form-control"
+    type="text"
+    placeholder="Search Recipe Descriptions"
+    onChange={(e) => setDescriptionField(e.target.value)}
+  />
+</div>
 
       <div> <label> Dairy </label> <input type="checkbox" value={filterDairy} onClick={() => setFilterDairy(!filterDairy)}/></div>
       <div> <label> Gluten </label> <input type="checkbox" value={filterGluten} onClick={() => setFilterGluten(!filterGluten)}/></div>
@@ -79,8 +92,6 @@ function Search(params) {
 
 
   );
-
-
 
 }
 export default Search;

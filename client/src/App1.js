@@ -24,7 +24,7 @@ export default function App() {
     description: "",
     price: "",
     category: "",
-    ingredients: "",
+    ingredients: [{ food_ingredient: "", food_ingredientquantity:"",}],
     allergens: [],
     available: "",
     review: [],
@@ -50,7 +50,7 @@ export default function App() {
 
   useEffect(() => {
     touchData();
-  }, [touchData]);
+  }, []);
 
   return (
     <BrowserRouter>
