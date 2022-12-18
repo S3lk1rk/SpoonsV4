@@ -1,6 +1,6 @@
 # SpoonsV2
 Matthew Selkirk's Coursework for FEWD
-please 🐻 bear with, the initial load ⏰ time for the application may be lengthy due to the nature of single page applications loading everything at once. a hosted version of the application can be found at [Matthews Heroku app](https://google.com/)
+please 🐻 bear with, the initial load ⏰ time for the application may be lengthy due to the nature of single page applications loading everything at once. a hosted version of the application can be found at [Matthews Heroku app](https://spoonsv3.herokuapp.com/)
 
 ## 🧬 Purpose of the application
 The purpose of the application was to create a responsive, single-page cookery application. Which is
@@ -16,47 +16,39 @@ The basic requirements for the application were that it should allow users to
 All of these criteria have been met by the project and an additional step of adding a backend was undertaken to match the design specification created for part A of the coursework
 
 ## 🚀 Running the application
+The application will be deployed on the heroku app at [Matthews Heroku app](https://spoonsv3.herokuapp.com/) if you wish to run the program locally there are a few steps.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### `Viewing the deployed application`
+*The deployed application has the ability to search through a list of recipes stored in the database, to search enter any letter to the search bar and click on the name of the item when it appears below in the search results, clicking it will expand the accordian and offer the user the ability to view the whole recipe item.
 
-### `prerequisites` 
+*The search can be further augmented through the use of allergy filters which eliminate items from the list if the allergy is found in the associated area of the database, this works in conjunction with the other functionality of the searching.
 
-Please ensure that before running the application you can use node package manager to install 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+*The secondary searchbar is an ingredients filter that will allow users to search for an ingredient that they have available, it will only display the results that include the ingredient searched for but works alongside the other filter methods.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+*When expanded the recipe items offer the ability to view nutritional information first in a list then followed in graphical format to enable a diverse choice of views to better understand the data.
 
-### `install`
+*Their is also a review section to each recipe item that allows users to enter Their name, a number 1-10 and a comment to rate their experience with each dish. once written it will be added to the current reviews below.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+*Each item can be added to my recipes via button press, where they will be stored for ease of access to your favourite dishes, they can be removed on the associated navigation page.
+Similarly to my recipes, the shopping list stores chosen dishes but takes in the ingredients required to prepare them so that the user can view their shopping list in one place on the associated navigation page, where if needed they can be removed.
 
-### `usage`
+### `Local installation` 
+-When the application zip file has been downloaded, extract it and open with visual code studio.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+-Navigate to the backend directory and run `NPM I` to install the packages.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+-in a second terminal navigate to the Client folder and do NPM I to install the packages.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+-Once the packages have been installed do `node index` in the backend folder terminal to initialise the database and visit [http://localhost:3001/recipe](http://localhost:3000/recipe) to view if the database has been filled.
 
-### `npm run eject`
+-if the database for any reason is empty navigate to [http://localhost:3001/recipe](http://localhost:3000/recipe/new) in your browser and the initialisation of the `recipe.db` will fill the database (this is not recommended if the database already has information in it as it will duplicate the information)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-## Basis of the application
-The application is connected to a 
+-After the backend is running make sure to use npm start in the client folder terminal to initialise the front end of the application and wait, it will automatically open the browser for you and if not open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 ## Justification of changes
 
 Due to the lack of familiarity with backend software it was decided that a simplified approach to the database using a single table with dictionairies containing extended information. This information would have been placed in its own table and linked into their current position, however as it is not a primary concern of the coursework task it has been downgraded in priority to achieve.
+
+As it was outside the necessary scope some of the design documents features were discarded, like the login system and by extension the linked pages like my reviews.
 
 Lastly I would like to say thank you for taking the time to read this 🥂
