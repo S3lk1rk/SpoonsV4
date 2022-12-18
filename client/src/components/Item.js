@@ -12,9 +12,8 @@ const [OpenNutrition, SetOpenNutrition] = useState(false);
       <Accordion.Header> {food.name}</Accordion.Header>
       
       <Accordion.Body>
-      <p>{food.category}</p>
+        <p>{food.category}</p>
         <p>{food.description}</p>
-        <p>{food.price}</p>
         <p>{food.allergens}</p>
          
         <button onClick={() => SetOpenNutrition(!OpenNutrition)}>Toggle Nutrition</button>
