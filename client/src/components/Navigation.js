@@ -16,17 +16,17 @@ const Layout = () => {
             </li>
             <li className="nav-item">
               <Link to="/recipes" className="nav-link">
-                Recipes
+                Recipe Search
               </Link>
             </li>
             <li className="nav-item">
               <Link to="/shopping" className="nav-link">
-                Shopping List
+                My Shopping List
               </Link>
             </li>
             <li className="nav-item">
-              <Link to="/menus" className="nav-link">
-                Menus
+              <Link to="/savedrecipe" className="nav-link">
+                Saved Recipes
               </Link>
             </li>
            

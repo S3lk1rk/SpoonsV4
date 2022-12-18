@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from "react";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import StyledLayout from "./components/StyledLayout";
+import StyledLayout from "./components/Navigation";
 import Home from "./components/Homepage";
 import CategoryFilter from "./components/AllergyFilteringSearch"
 import Item from "./components/BaseLayerItem";
@@ -53,7 +53,7 @@ export default function App() {
           <Route path="/recipes" element={<CategoryFilter details={foods} type={"DisplayLocally"} />} >
             <Route path=":itemId" element={<Item items={foods} />} />
           </Route>
-          <Route path="/menus" element={<MenuFilter details={foods} />}>
+          <Route path="/savedrecipe" element={<MenuFilter details={foods} />}>
           </Route>
           <Route path="/shopping" element={<ShoppingFilter details={foods} />}>
           </Route>

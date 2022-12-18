@@ -12,6 +12,7 @@ body {
   background: radial-gradient(ellipse at center, rgb(39, 18, 156) 30%, rgb(53, 23, 161) 100%);
 background-size: cover;
 
+
 }
 .dave{
   background: radial-gradient(ellipse at center, rgb(39, 18, 156) 30%, rgb(53, 23, 161) 100%);
@@ -32,11 +33,12 @@ a:hover {
     color: #f1b51c;
    font-size: 16px;
    padding:0.5%;
+   
  }
 
  
  .bg-custom {
-     background-color: rgb(235, 242, 244) !important;
+     background-color: rgba(57, 39, 153, 0.918) !important;
  }
 
  .menu {
@@ -49,12 +51,13 @@ a:hover {
 }
 
 .submenu {
-  background-color: rgba(20, 64, 74, 1) !important;
+  background: radial-gradient(ellipse at center, rgba(57, 39, 153, 0.918) 30%, rgba(105, 85, 177, 0.562) 100%);
   margin-top:0%;
   padding-bottom: 0.5%;
   padding-top: 0.5%;
-  border:rgb(235, 242, 244) solid 10px;
-  border-top:rgb(235, 242, 244) solid 0px;
+  border:rgb(13, 172, 216) solid 10px;
+  border-top:rgb(21, 135, 167) solid 0px;
+  
   
 }
 nav {margin-left: 0;
@@ -65,29 +68,35 @@ nav li  {
   
   }
 nav ul {
-    background-color: rgba(20, 64, 74, 1) !important;
+    background: radial-gradient(ellipse at center, rgba(57, 39, 153, 0.918) 30%, rgba(105, 85, 177, 0.562) 100%);
 
     margin-left: 0%;
     margin-block-start: 0;
     padding-inline-start: 0;
     width:100%;
+    text-align: center;
+    
   }
 nav  a {
     text-decoration: none;
     color:rgb(254, 255, 255);
     margin-left: 0;
+    
   }
   body { 
     padding:0.5%;
     color:darkgrey;
     background-color:#14404a;
+    
   }
   ul {
     list-style: none;
+    
   }
   a {
     text-decoration: none;
     color:darkgrey;
+    
   }
   a:hover {
    font-weight: bold;
