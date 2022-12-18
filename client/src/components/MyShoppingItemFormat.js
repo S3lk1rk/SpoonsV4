@@ -4,11 +4,12 @@ const Item = ({ food }) => {
     <div>
       <h4>{food.name}</h4>
       <p>Description of the final product: {food.description}</p>
+      <p>Ingredients</p>
       {food.ingredients.map((item, i) => {
-        return <div>Ingredient: {item.ItemIngredient}  Quantity: {item.ItemQuantity}</div>
+        return <div>{item.ItemIngredient}  Quantity: {item.ItemQuantity}</div>
       })}
       <br></br>
-      <p>Allergies to be aware of: {food.AllergyTrigger}</p>
+      <p>Allergies to be aware of: {food.AllergyTrigger} </p>
       <button onClick={() => { food.shopping.splice(0, food.shopping.length) }}> Remove from Shopping List </button>
     </div>
   );

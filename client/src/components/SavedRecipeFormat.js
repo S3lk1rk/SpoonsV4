@@ -20,7 +20,7 @@ const Item = ({ food }) => {
           ))}
         </ol>
 
-      <p>Allergies to be aware of: {food.AllergyTrigger}</p>
+      <p>Allergies to be aware of: {food.AllergyTrigger} </p>
       <button onClick={() => SetOpenNutrition(!OpenNutrition)}>Display/Hide nutritional information</button>
       {OpenNutrition && <FetchNutrition query={food.name} />}
       <button onClick={() => { food.Saveditem.splice(0, food.Saveditem.length) }}> Remove from Saveditem </button>
