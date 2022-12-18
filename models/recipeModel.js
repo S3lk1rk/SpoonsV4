@@ -15,15 +15,20 @@ class recipe {
         this.recipe.insert({
             id: "1",
             name: "carrot cake",
-            description: "home made here",
+            description: "Made with love and care by our ",
             price: "2.50",
             category: "dessert",
-            ingredients: "",
+            ingredients: "The special sauce",
             allergens: ["Dairy", "Gluten", "Nuts"],
             available: "no",
             review: [],
             menu: [],
-            shopping: []
+            shopping: [],
+            preview: [{
+                name: "Fred",
+                rating: "5",
+                comment: "An excellent meal, would buy again",
+            }],
         });
         this.recipe.insert({
             id: "2",
@@ -36,7 +41,13 @@ class recipe {
             available: "no",
             review: [],
             menu: [],
-            shopping: []
+            shopping: [],
+            preview: [{
+                name: "Fred",
+                rating: "5",
+                comment: "An excellent meal, would buy again",
+            }],
+
         });
         this.recipe.insert({
             id: "3",
@@ -48,8 +59,12 @@ class recipe {
             allergens: ["Nuts"],
             available: "yes",
             review: [],
-            menu: [],
-            shopping: []
+            shopping: [],
+            preview: [{
+                name: "Fred",
+                rating: "5",
+                comment: "An excellent meal, would buy again",
+            }],
         });
         this.recipe.insert({
             id: "4",
@@ -62,7 +77,12 @@ class recipe {
             available: "yes",
             review: [],
             menu: [],
-            shopping: []
+            shopping: [],
+            preview: [{
+                name: "Fred",
+                rating: "5",
+                comment: "An excellent meal, would buy again",
+            }],
         });
         this.recipe.insert({
             id: "5",
@@ -75,164 +95,12 @@ class recipe {
             available: "yes",
             review: [],
             menu: [],
-            shopping: []
-        });
-        this.recipe.insert({
-            id: "6",
-            name: "soup",
-            description: "ask for soups available today",
-            price: "2.00",
-            category: "starter",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
-        });
-        this.recipe.insert({
-            id: "7",
-            name: "pizza",
-            description: "ham and pineapple or four cheese",
-            price: "5.00",
-            category: "main",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
-        });
-        this.recipe.insert({
-            id: "8",
-            name: "baked potato",
-            description: "with cheese, coleslaw, beans or tuna",
-            price: "4.50",
-            category: "main",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
-        });
-        this.recipe.insert({
-            id: "9",
-            name: "apple pie",
-            description: "with cream or custard",
-            price: "3.50",
-            category: "dessert",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
-
-        });
-        this.recipe.insert({
-            id: "10",
-            name: "cheesecake",
-            description: "with cream",
-            price: "3.00",
-            category: "dessert",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
-        });
-        this.recipe.insert({
-            id: "11",
-            name: "fish and chips",
-            description: "locally caught ",
-            price: "6.50",
-            category: "main",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
-        });
-        this.recipe.insert({
-            id: "12",
-            name: "lasagne",
-            description: "with chips or garlic bread",
-            price: "6.50",
-            category: "main",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
-        });
-        this.recipe.insert({
-            id: "13",
-            name: "ice cream",
-            description: "various flavours",
-            price: "2.50",
-            category: "dessert",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
-        });
-        this.recipe.insert({
-            id: "14",
-            name: "coffee",
-            description: "freshly ground",
-            price: "1.50",
-            category: "drinks",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
-        });
-        this.recipe.insert({
-            id: "15",
-            name: "tea",
-            description: "a range of varieties",
-            price: "1",
-            category: "drinks",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
-        });
-        this.recipe.insert({
-            id: "16",
-            name: "pasta",
-            description: "with a tomato and garlic sauce",
-            price: "5.50",
-            category: "main",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
-        });
-        this.recipe.insert({
-            id: "17",
-            name: "chips",
-            description: "with ketchup or mayonnaise",
-            price: "3",
-            category: "side",
-            ingredients: "",
-            allergens: "",
-            available: "yes",
-            review: [],
-            menu: [],
-            shopping: []
+            shopping: [],
+            preview: [{
+                name: "Fred",
+                rating: "5",
+                comment: "An excellent meal, would buy again",
+            }],
         });
     }
 

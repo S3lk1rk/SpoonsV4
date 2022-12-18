@@ -62,7 +62,7 @@ function Search(params) {
       <div> <input
         className="form-control"
         type="text"
-        placeholder="Search ..."
+        placeholder="To start searching type here..."
         onChange={(e) => setSearchField(e.target.value)}
       /> </div>
 

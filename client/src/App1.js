@@ -29,7 +29,12 @@ export default function App() {
     available: "",
     review: [],
     menu: [],
-    shopping: []
+    shopping: [],
+    preview: {
+      name: "",
+      rating: "",
+      comment: "",
+    },
   }]);
 
   const touchData = useCallback(() => {
