@@ -7,22 +7,22 @@ function Search(params) {
   console.log(details)
 
   const [searchField, setSearchField] = useState("");
-  const [filterDairy, setFilterDairy] = useState(false);
+  const [filterLactose, setFilterLactose] = useState(false);
   const [filterGluten, setFilterGluten] = useState(false);
   const [filterNuts, setFilterNuts] = useState(false);
   const [displayData, setDisplayData] = useState("");
   const [descriptionField, setDescriptionField] = useState("");
 
-const combinedFiltered = details.filter((entry) => {
-  console.log(entry)
-  return entry?.name?.toLowerCase().includes(searchField.toLowerCase()) &&
-  entry?.ingredients?.some((item) => { return item?.food_ingredient?.includes(descriptionField)})
-  
-});
-  
-  const dairyData = (data) => {
+  const combinedFiltered = details.filter((entry) => {
+    console.log(entry)
+    return entry?.name?.toLowerCase().includes(searchField.toLowerCase()) &&
+      entry?.ingredients?.some((item) => { return item?.food_ingredient?.includes(descriptionField) })
+
+  });
+
+  const LactoseData = (data) => {
     return data.filter((entry) => {
-      return !entry.allergens.includes("Dairy")
+      return !entry.allergens.includes("Lactose")
     })
 
   }
@@ -41,14 +41,14 @@ const combinedFiltered = details.filter((entry) => {
 
   useEffect(() => {
     let result = combinedFiltered;
-    if (!filterDairy && !filterGluten && !filterNuts) {
+    if (!filterLactose && !filterGluten && !filterNuts) {
       setDisplayData(combinedFiltered)
     }
 
     else {
 
-      if (filterDairy) {
-        result = dairyData(result)
+      if (filterLactose) {
+        result = LactoseData(result)
       }
       if (filterGluten) {
         result = glutenData(result)
@@ -58,7 +58,7 @@ const combinedFiltered = details.filter((entry) => {
       }
       setDisplayData(result)
     }
-  }, [searchField, descriptionField, filterDairy, filterGluten, filterNuts])
+  }, [searchField, descriptionField, filterLactose, filterGluten, filterNuts])
 
 
   return (
@@ -70,18 +70,18 @@ const combinedFiltered = details.filter((entry) => {
         onChange={(e) => setSearchField(e.target.value)}
       /> </div>
 
-<div>
-  <input
-    className="form-control"
-    type="text"
-    placeholder="Search Recipe Descriptions"
-    onChange={(e) => setDescriptionField(e.target.value)}
-  />
-</div>
+      <div>
+        <input
+          className="form-control"
+          type="text"
+          placeholder="Search Recipe Descriptions"
+          onChange={(e) => setDescriptionField(e.target.value)}
+        />
+      </div>
 
-      <div> <label> Dairy </label> <input type="checkbox" value={filterDairy} onClick={() => setFilterDairy(!filterDairy)}/></div>
-      <div> <label> Gluten </label> <input type="checkbox" value={filterGluten} onClick={() => setFilterGluten(!filterGluten)}/></div>
-      <div> <label> Nuts </label> <input type="checkbox" value={filterNuts} onClick={() => setFilterNuts(!filterNuts)}/></div>
+      <div> <label> Lactose </label> <input type="checkbox" value={filterLactose} onClick={() => setFilterLactose(!filterLactose)} /></div>
+      <div> <label> Gluten </label> <input type="checkbox" value={filterGluten} onClick={() => setFilterGluten(!filterGluten)} /></div>
+      <div> <label> Nuts </label> <input type="checkbox" value={filterNuts} onClick={() => setFilterNuts(!filterNuts)} /></div>
 
       {displayData && <>
         {params.type === "recipe" && <MenuItems type={"recipe"} items={displayData} />}

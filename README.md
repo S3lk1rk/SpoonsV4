@@ -18,7 +18,7 @@ All of these criteria have been met by the project and an additional step of add
 ## 🚀 Running the application
 The application will be deployed on the heroku app at [Matthews Heroku app](https://spoonsv3.herokuapp.com/) if you wish to run the program locally there are a few steps.
 
-### `Viewing the deployed application`
+### 💻 `Viewing the deployed application`
 * The deployed application has the ability to search through a list of recipes stored in the database, to search enter any letter to the search bar and click on the name of the item when it appears below in the search results, clicking it will expand the accordian and offer the user the ability to view the whole recipe item.
 
 * The search can be further augmented through the use of allergy filters which eliminate items from the list if the allergy is found in the associated area of the database, this works in conjunction with the other functionality of the searching.
@@ -33,7 +33,7 @@ The application will be deployed on the heroku app at [Matthews Heroku app](http
 
 * Similarly to my recipes, the shopping list stores chosen dishes but takes in the ingredients required to prepare them so that the user can view their shopping list in one place on the associated navigation page, where if needed they can be removed.
 
-### `Local installation` 
+### 💾 `Local installation` 
 - When the application zip file has been downloaded, extract it and open with visual code studio.
 
 - Navigate to the backend directory and run `NPM I` to install the packages.
@@ -46,7 +46,7 @@ The application will be deployed on the heroku app at [Matthews Heroku app](http
 
 - After the backend is running make sure to use npm start in the client folder terminal to initialise the front end of the application and wait, it will automatically open the browser for you and if not open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
-## Justification of changes
+## 🔨 Justification of changes
 
 Due to the lack of familiarity with backend software it was decided that a simplified approach to the database using a single table with dictionairies containing extended information. This information would have been placed in its own table and linked into their current position, however as it is not a primary concern of the coursework task it has been downgraded in priority to achieve.
 
