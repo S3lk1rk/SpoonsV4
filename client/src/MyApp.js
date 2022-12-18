@@ -3,7 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import StyledLayout from "./components/StyledLayout";
 import Home from "./components/Homepage";
 import CategoryFilter from "./components/AllergyFilteringSearch"
-import Item from "./components/BaseLayerItems";
+import Item from "./components/BaseLayerItem";
 import NoPage from "./components/A404Page";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MenuFilter from "./components/SavedListShow"

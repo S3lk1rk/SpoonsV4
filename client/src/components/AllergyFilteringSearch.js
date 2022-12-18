@@ -16,8 +16,8 @@ function Search(params) {
 
   const combinedFiltered = details.filter((entry) => {
     console.log(entry)
-    return entry?.name?.toLowerCase().includes(searchField.toLowerCase()) &&
-      entry?.ingredients?.some((item) => { return item?.food_ingredient?.includes(descriptionField) })
+    return entry.name.toLowerCase().includes(searchField.toLowerCase()) &&
+      entry.ingredients.some((item) => { return item.food_ingredient.includes(descriptionField) })
 
   });
 
@@ -73,12 +73,12 @@ function Search(params) {
 
   return (
     <div>
-      <div> <input
+     <div> <input
         className="form-control"
         type="text"
         placeholder="Search ..."
         onChange={(e) => setSearchField(e.target.value)}
-      /> </div>
+      /> </div> 
 
       <div>
         <input

@@ -1,13 +1,13 @@
 import React from "react";
 import { Link, Outlet } from "react-router-dom";
-import Header from "./PageHeadAcrossApp";
+
 
 const Layout = () => {
   return (
     <>
       <nav className="navbar navbar-expand-sm bg-light navbar-dark bg-custom">
-        <Header />
-        <div className="container-fluid" style= {{marginLeft:"10%"}}>
+        
+        <div className="container-fluid" >
           <ul className="navbar-nav">
             <li className="nav-item">
               <Link to="/" className="nav-link">
@@ -29,6 +29,8 @@ const Layout = () => {
                 Menus
               </Link>
             </li>
+           
+          
           </ul>
         </div>
       </nav>
