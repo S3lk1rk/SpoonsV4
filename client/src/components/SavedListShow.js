@@ -1,6 +1,7 @@
 import React, { useEffect, useState, useReducer } from "react";
 import MenuItems from "./MenuItems";
-import CatagoryFilter from "./CategoryFilter"
+//import CatagoryFilter from "./CategoryFilter"
+import SavedItems from "./SavedFilter";
 function Search({ details }) {
     
     const menufilter = details.filter((entry) => {
@@ -11,7 +12,7 @@ function Search({ details }) {
 
     return (
         <div>
-           {<CatagoryFilter details={menufilter} type={"menu"}/>}
+           {<SavedItems details={menufilter} type={"menu"}/>}
         </div>
         
     );

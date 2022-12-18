@@ -1,27 +1,18 @@
 import React, { useState, useEffect } from "react";
-import Accordion from 'react-bootstrap/Accordion';
 import FetchNutrition from "./FetchNutrition";
-import Review from "./Review";
 
 const Item = ({ food }) => {
   const [OpenNutrition, SetOpenNutrition] = useState(false);
 
   return (
     <div>
-      <Accordion.Header> {food.name}</Accordion.Header>
-      <Accordion.Body>
-        <p>{food.description}</p>
-        <p>{food.allergens}</p>
-
-        <button onClick={() => SetOpenNutrition(!OpenNutrition)}>Show Nutrition</button>
+        <h4>{food.name}</h4>
+        <p>Description of the dish: {food.description}</p>
+        <p>Allergies to be aware of: {food.allergens}</p>
+        <button onClick={() => SetOpenNutrition(!OpenNutrition)}>Display nutritional information</button>
         {OpenNutrition && <FetchNutrition query={food.name} />}
-
-        <p><Review food={food} /></p>
         <button onClick={() => { food.menu.splice(0, food.menu.length) }}> Remove from Menu </button>
-      </Accordion.Body>
     </div>
-
-
   );
 };
 export default Item;

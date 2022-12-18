@@ -6,8 +6,8 @@ import CategoryFilter from "./components/CategoryFilter"
 import Item from "./components/Item";
 import NoPage from "./components/NoPage";
 import "bootstrap/dist/css/bootstrap.min.css";
-import MenuFilter from "./components/MenuDisplay"
-import ShoppingFilter from "./components/ShoppingListDisplay"
+import MenuFilter from "./components/SavedListShow"
+import ShoppingFilter from "./components/MyShopShow"
 
 export default function App() {
 
