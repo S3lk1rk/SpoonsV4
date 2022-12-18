@@ -1,5 +1,4 @@
 import React, { useEffect, useState, useReducer } from "react";
-import MenuItems from "./MenuItems";
 import CatagoryFilter from "./CategoryFilter"
 function Search({ details }) {
     
