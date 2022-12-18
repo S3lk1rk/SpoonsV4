@@ -4,7 +4,7 @@ import StyledLayout from "./components/StyledLayout";
 import Home from "./components/Home";
 import CategoryFilter from "./components/CategoryFilter"
 import Item from "./components/Item";
-import NoPage from "./components/NoPage";
+import NoPage from "./components/A404Page";
 import "bootstrap/dist/css/bootstrap.min.css";
 import MenuFilter from "./components/SavedListShow"
 import ShoppingFilter from "./components/MyShopShow"
@@ -45,7 +45,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<StyledLayout />}>
           <Route index element={<Home />} />
-          <Route path="recipes" element={<CategoryFilter details={foods} type={"recipe"} />} >
+          <Route path="/recipes" element={<CategoryFilter details={foods} type={"DisplayLocally"} />} >
             <Route path=":itemId" element={<Item items={foods} />} />
           </Route>
           <Route path="/menus" element={<MenuFilter details={foods} />}>

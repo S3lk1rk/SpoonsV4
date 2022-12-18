@@ -5,14 +5,14 @@ import SavedItems from "./SavedFilter";
 function Search({ details }) {
     
     const menufilter = details.filter((entry) => {
-        return entry.menu.includes("menu");
+        return entry.menu.includes("favourite");
     });
     
     //use entry.menu = [] to know that the array is empty
 
     return (
         <div>
-           {<SavedItems details={menufilter} type={"menu"}/>}
+           {<SavedItems details={menufilter} type={"favourite"}/>}
         </div>
         
     );

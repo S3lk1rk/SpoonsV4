@@ -3,12 +3,12 @@ import React from "react";
 import Filtration from "./MyShoppingListFilter"
 function shoppinglist({ details }) {
     const shoppingfilter = details.filter((entry) => {
-        return entry.shopping.includes("shopping");
+        return entry.shopping.includes("inshoplist");
     });
     return (
         <div>
            
-            <Filtration details={shoppingfilter} type={"shopping"}/>
+            <Filtration details={shoppingfilter} type={"inshoplist"}/>
         </div>
         
     );

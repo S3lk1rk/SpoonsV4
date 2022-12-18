@@ -27,7 +27,7 @@ function Search(params) {
       <p>Expand the accordion to view the ingredients to purchase</p>
       <p>or to remove from the list</p>
       {displayData && <>
-        {params.type === "shopping" && <MenuItems type={"shopping"} items={displayData} />}
+        {params.type === "inshoplist" && <MenuItems type={"inshoplist"} items={displayData} />}
       </>}
     </div>
 

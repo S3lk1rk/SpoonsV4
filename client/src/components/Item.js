@@ -21,8 +21,8 @@ const [OpenNutrition, SetOpenNutrition] = useState(false);
         
         <p><Review food={food}/></p>
         <p>{food.review}</p>
-        <button onClick={() =>  food.menu.splice(0, food.menu.length, "menu") && console.log(food.menu)}> Add To Menu </button>
-        <button onClick={() =>  food.shopping.splice(0, food.shopping.length, "shopping") && console.log(food.shopping)}> Add To shopping </button>
+        <button onClick={() =>  food.menu.splice(0, food.menu.length, "favourite") && console.log(food.menu)}> Add To Menu </button>
+        <button onClick={() =>  food.shopping.splice(0, food.shopping.length, "inshoplist") && console.log(food.shopping)}> Add To shopping </button>
       </Accordion.Body>
 </div>
 

@@ -8,12 +8,13 @@ const MenuItems = (params) => {
   const items = params.items
   return (
     <Accordion style={{width:50+'%'}}>
+      <p>show me the money</p>
       {items.map((food, index) => {
         return (
           <Accordion.Item eventKey={index} key={index}>
-            {params.type === "recipe" && <Item food={food} />}
-            {params.type === "shopping" && <Shoppingitem food={food} />}
-            {params.type === "menu" && <Menuitem food={food} />}
+            {params.type === "DisplayLocally" && <Item food={food} />}
+            {params.type === "inshoplist" && <Shoppingitem food={food} />}
+            {params.type === "favourite" && <Menuitem food={food} />}
           </Accordion.Item>
         );
       })}

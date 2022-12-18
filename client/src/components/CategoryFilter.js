@@ -95,9 +95,7 @@ function Search(params) {
       <div> <label> Eggs </label> <input type="checkbox" value={filterEggs} onClick={() => setFilterEggs(!filterEggs)} /></div>
 
       {displayData && <>
-        {params.type === "recipe" && <MenuItems type={"recipe"} items={displayData} />}
-        {params.type === "shopping" && <MenuItems type={"shopping"} items={displayData} />}
-        {params.type === "menu" && <MenuItems type={"menu"} items={displayData} />}
+        {params.type === "DisplayLocally" && <MenuItems type={"DisplayLocally"} items={displayData} />}
       </>}
     </div>
 
