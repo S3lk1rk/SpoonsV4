@@ -8,8 +8,9 @@ function Search(params) {
 
   const [searchField, setSearchField] = useState("");
   const [filterLactose, setFilterLactose] = useState(false);
-  const [filterGluten, setFilterGluten] = useState(false);
-  const [filterNuts, setFilterNuts] = useState(false);
+  const [filterWheat, setFilterWheat] = useState(false);
+  const [filterFish, setFilterFish] = useState(false);
+  const [filterEggs, setFilterEggs] = useState(false);
   const [displayData, setDisplayData] = useState("");
   const [descriptionField, setDescriptionField] = useState("");
 
@@ -26,22 +27,28 @@ function Search(params) {
     })
 
   }
-  const glutenData = (data) => {
+  const WheatData = (data) => {
     return data.filter((entry) => {
-      return !entry.allergens.includes("Gluten")
+      return !entry.allergens.includes("Wheat")
     })
 
   }
-  const nutsData = (data) => {
+  const FishData = (data) => {
     return data.filter((entry) => {
-      return !entry.allergens.includes("Nuts")
+      return !entry.allergens.includes("Fish")
+    })
+
+  }
+  const EggsData = (data) => {
+    return data.filter((entry) => {
+      return !entry.allergens.includes("Eggs")
     })
 
   }
 
   useEffect(() => {
     let result = combinedFiltered;
-    if (!filterLactose && !filterGluten && !filterNuts) {
+    if (!filterLactose && !filterWheat && !filterFish && !filterEggs) {
       setDisplayData(combinedFiltered)
     }
 
@@ -50,15 +57,18 @@ function Search(params) {
       if (filterLactose) {
         result = LactoseData(result)
       }
-      if (filterGluten) {
-        result = glutenData(result)
+      if (filterWheat) {
+        result = WheatData(result)
       }
-      if (filterNuts) {
-        result = nutsData(result)
+      if (filterFish) {
+        result = FishData(result)
+      }
+      if (filterEggs) {
+        result = EggsData(result)
       }
       setDisplayData(result)
     }
-  }, [searchField, descriptionField, filterLactose, filterGluten, filterNuts])
+  }, [searchField, descriptionField, filterLactose, filterWheat, filterFish, filterEggs])
 
 
   return (
@@ -80,8 +90,9 @@ function Search(params) {
       </div>
 
       <div> <label> Lactose </label> <input type="checkbox" value={filterLactose} onClick={() => setFilterLactose(!filterLactose)} /></div>
-      <div> <label> Gluten </label> <input type="checkbox" value={filterGluten} onClick={() => setFilterGluten(!filterGluten)} /></div>
-      <div> <label> Nuts </label> <input type="checkbox" value={filterNuts} onClick={() => setFilterNuts(!filterNuts)} /></div>
+      <div> <label> Wheat </label> <input type="checkbox" value={filterWheat} onClick={() => setFilterWheat(!filterWheat)} /></div>
+      <div> <label> Fish </label> <input type="checkbox" value={filterFish} onClick={() => setFilterFish(!filterFish)} /></div>
+      <div> <label> Eggs </label> <input type="checkbox" value={filterEggs} onClick={() => setFilterEggs(!filterEggs)} /></div>
 
       {displayData && <>
         {params.type === "recipe" && <MenuItems type={"recipe"} items={displayData} />}
