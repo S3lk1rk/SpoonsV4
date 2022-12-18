@@ -13,6 +13,7 @@ function Search(params) {
   const [filterEggs, setFilterEggs] = useState(false);
   const [displayData, setDisplayData] = useState("");
   const [descriptionField, setDescriptionField] = useState("");
+  const [showingredientsearch, setShowIngredientSearch] = useState(false);
 
   const combinedFiltered = details.filter((entry) => {
     console.log(entry)
@@ -20,6 +21,7 @@ function Search(params) {
       entry.ingredients.some((item) => { return item.food_ingredient.includes(descriptionField) })
 
   });
+
 
   const LactoseData = (data) => {
     return data.filter((entry) => {
@@ -72,33 +74,54 @@ function Search(params) {
 
 
   return (
-    <div>
-     <div> <input
-        className="form-control"
-        type="text"
-        placeholder="Search ..."
-        onChange={(e) => setSearchField(e.target.value)}
-      /> </div> 
+    <div className="centre">
 
-      <div>
-        <input
+      
+        <div><p>Please select your allergies and the dishes will be filtered to exlude them.</p></div><div className="flexAllergy">
+        <div> <label> Lactose </label> <input type="checkbox" value={filterLactose} onClick={() => setFilterLactose(!filterLactose)} /></div>
+        <div> <label> Wheat </label> <input type="checkbox" value={filterWheat} onClick={() => setFilterWheat(!filterWheat)} /></div>
+        <div> <label> Fish </label> <input type="checkbox" value={filterFish} onClick={() => setFilterFish(!filterFish)} /></div>
+        <div> <label> Eggs </label> <input type="checkbox" value={filterEggs} onClick={() => setFilterEggs(!filterEggs)} /></div>
+      </div>
+
+      <div className="flexSearchbar">
+
+        <div className="mainSearch"> 
+          <input
+          className="form-control"
+          type="text"
+          placeholder="Search ..."
+          onChange={(e) => setSearchField(e.target.value)}
+        />
+
+        </div>
+        <div className="flexSlider">
+
+          <div className="sliderwid">
+            <label className="switch">
+              <input type="checkbox" value={showingredientsearch} onClick={() => setShowIngredientSearch(!showingredientsearch)}/>
+              <span className="slider round"></span>
+            </label>
+            <p>Ingredient search</p>
+          </div>
+
+       { showingredientsearch && <div className="flexIngredients">
+        <input id="dave"
           className="form-control"
           type="text"
           placeholder="Search Recipe Descriptions"
           onChange={(e) => setDescriptionField(e.target.value)}
         />
-      </div>
+      </div>}
+        </div>
+      </div >
 
-      <div> <label> Lactose </label> <input type="checkbox" value={filterLactose} onClick={() => setFilterLactose(!filterLactose)} /></div>
-      <div> <label> Wheat </label> <input type="checkbox" value={filterWheat} onClick={() => setFilterWheat(!filterWheat)} /></div>
-      <div> <label> Fish </label> <input type="checkbox" value={filterFish} onClick={() => setFilterFish(!filterFish)} /></div>
-      <div> <label> Eggs </label> <input type="checkbox" value={filterEggs} onClick={() => setFilterEggs(!filterEggs)} /></div>
 
       {displayData && <>
         {params.type === "DisplayLocally" && <MenuItems type={"DisplayLocally"} items={displayData} />}
       </>}
     </div>
-
+    
 
   );
 
