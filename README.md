@@ -40,11 +40,17 @@ The application will be deployed on the heroku app at [Matthews Heroku app](http
 
 - in a second terminal navigate to the Client folder and do NPM I to install the packages.
 
-- Once the packages have been installed do `node index` in the backend folder terminal to initialise the database and visit [http://localhost:3001/recipe](http://localhost:3000/recipe) to view if the database has been filled.
+- Once the packages have been installed do `node index` in the backend folder terminal to initialise the database and visit 
+[http://localhost:3001/recipe](http://localhost:3000/recipe)
+- to view if the database has been filled.
 
-- if the database for any reason is empty navigate to [http://localhost:3001/recipe/new](http://localhost:3000/recipe/new) in your browser and the initialisation of the `recipe.db` will fill the database (this is not recommended if the database already has information in it as it will duplicate the information)
+- if the database for any reason is empty navigate to 
+[http://localhost:3001/recipe/new](http://localhost:3000/recipe/new)
+- in your browser and the initialisation of the `recipe.db` will fill the database (this is not recommended if the database already has information in it as it will duplicate the information)
 
-- After the backend is running make sure to use npm start in the client folder terminal to initialise the front end of the application and wait, it will automatically open the browser for you and if not open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- After the backend is running make sure to use npm start in the client folder terminal to initialise the front end of the application and wait, it will automatically open the browser for you and if not open 
+[http://localhost:3000](http://localhost:3000)
+- to view it in your browser.
 
 ## Justification of changes
 
