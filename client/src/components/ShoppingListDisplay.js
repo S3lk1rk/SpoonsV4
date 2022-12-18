@@ -4,7 +4,6 @@ function shoppinglist({ details }) {
     const shoppingfilter = details.filter((entry) => {
         return entry.shopping.includes("shopping");
     });
-    
     return (
         <div>
            

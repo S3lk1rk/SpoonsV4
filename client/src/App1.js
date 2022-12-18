@@ -18,17 +18,13 @@ export default function App() {
     description: "",
     price: "",
     category: "",
-    ingredients: [{ food_ingredient: "", food_ingredientquantity:"",}],
+    ingredients: [],
     allergens: [],
     available: "",
     review: [],
     menu: [],
     shopping: [],
-    preview: [{
-      name: "",
-      rating: "",
-      comment: "",
-    }],
+    preview: [],
   }]);
 
   const touchData = useCallback(() => {
@@ -44,7 +40,7 @@ export default function App() {
 
   useEffect(() => {
     touchData();
-  }, []);
+  }, [touchData]);
 
   return (
     <BrowserRouter>

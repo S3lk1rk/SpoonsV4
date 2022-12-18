@@ -6,13 +6,9 @@ import Review from "./Review";
 const Item = ({ food }) => {
   const [OpenNutrition, SetOpenNutrition] = useState(false);
 
-
-
   return (
     <div>
-
       <Accordion.Header> {food.name}</Accordion.Header>
-
       <Accordion.Body>
         <p>{food.category}</p>
         <p>{food.description}</p>
@@ -23,7 +19,6 @@ const Item = ({ food }) => {
         {OpenNutrition && <FetchNutrition query={food.name} />}
 
         <p><Review food={food} /></p>
-        <p>{food.review}</p>
         <button onClick={() => { food.menu.splice(0, food.menu.length) }}> Remove from Menu </button>
       </Accordion.Body>
     </div>
