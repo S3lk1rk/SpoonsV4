@@ -23,9 +23,9 @@ export default function App() {
     description: "",
     category: "",
     ingredients: [],
-    allergens: [],
-    review: [],
-    menu: [],
+    AllergyTrigger: [],
+    FullMethod: [],
+    Saveditem: [],
     shopping: [],
     preview: [],
   }]);

@@ -18,32 +18,32 @@ function Search(params) {
   const combinedFiltered = details.filter((entry) => {
     console.log(entry)
     return entry.name.toLowerCase().includes(searchField.toLowerCase()) &&
-      entry.ingredients.some((item) => { return item.food_ingredient.includes(descriptionField) })
+      entry.ingredients.some((item) => { return item.ItemIngredient.includes(descriptionField) })
 
   });
 
 
   const LactoseData = (data) => {
     return data.filter((entry) => {
-      return !entry.allergens.includes("Lactose")
+      return !entry.AllergyTrigger.includes("Lactose")
     })
 
   }
   const WheatData = (data) => {
     return data.filter((entry) => {
-      return !entry.allergens.includes("Wheat")
+      return !entry.AllergyTrigger.includes("Wheat")
     })
 
   }
   const FishData = (data) => {
     return data.filter((entry) => {
-      return !entry.allergens.includes("Fish")
+      return !entry.AllergyTrigger.includes("Fish")
     })
 
   }
   const EggsData = (data) => {
     return data.filter((entry) => {
-      return !entry.allergens.includes("Eggs")
+      return !entry.AllergyTrigger.includes("Eggs")
     })
 
   }
@@ -76,8 +76,8 @@ function Search(params) {
   return (
     <div className="centre">
 
-      
-        <div><p>Please select your allergies and the dishes will be filtered to exlude them.</p></div><div className="flexAllergy">
+
+      <div><p>Please select your allergies and the dishes will be filtered to exlude them.</p></div><div className="flexAllergy">
         <div> <label> Lactose </label> <input type="checkbox" value={filterLactose} onClick={() => setFilterLactose(!filterLactose)} /></div>
         <div> <label> Wheat </label> <input type="checkbox" value={filterWheat} onClick={() => setFilterWheat(!filterWheat)} /></div>
         <div> <label> Fish </label> <input type="checkbox" value={filterFish} onClick={() => setFilterFish(!filterFish)} /></div>
@@ -86,33 +86,33 @@ function Search(params) {
 
       <div className="flexSearchbar">
 
-        <div className="mainSearch"> 
+        <div className="mainSearch">
           <input
-          className="form-control"
-          type="text"
-          placeholder="Search ..."
-          onChange={(e) => setSearchField(e.target.value)}
-        />
+            className="form-control"
+            type="text"
+            placeholder="Start searching by entering a recipe name ..."
+            onChange={(e) => setSearchField(e.target.value)}
+          />
 
         </div>
         <div className="flexSlider">
 
           <div className="sliderwid">
             <label className="switch">
-              <input type="checkbox" value={showingredientsearch} onClick={() => setShowIngredientSearch(!showingredientsearch)}/>
+              <input type="checkbox" value={showingredientsearch} onClick={() => setShowIngredientSearch(!showingredientsearch)} />
               <span className="slider round"></span>
             </label>
             <p>Ingredient search</p>
           </div>
 
-       { showingredientsearch && <div className="flexIngredients">
-        <input id="dave"
-          className="form-control"
-          type="text"
-          placeholder="Search Recipe Descriptions"
-          onChange={(e) => setDescriptionField(e.target.value)}
-        />
-      </div>}
+          {showingredientsearch && <div className="flexIngredients">
+            <input id="dave"
+              className="form-control"
+              type="text"
+              placeholder="Search Recipe Ingredients"
+              onChange={(e) => setDescriptionField(e.target.value)}
+            />
+          </div>}
         </div>
       </div >
 
@@ -121,7 +121,7 @@ function Search(params) {
         {params.type === "DisplayLocally" && <MenuItems type={"DisplayLocally"} items={displayData} />}
       </>}
     </div>
-    
+
 
   );
 

@@ -4,15 +4,13 @@ import MenuItems from "./ControllingMenuDisplay";
 import SavedItems from "./SavedFilter";
 function Search({ details }) {
 
-    const menufilter = details.filter((entry) => {
-        return entry.menu.includes("favourite");
+    const Saveditemfilter = details.filter((entry) => {
+        return entry.Saveditem.includes("favourite");
     });
-
-    //use entry.menu = [] to know that the array is empty
 
     return (
         <div>
-            {<SavedItems details={menufilter} type={"favourite"} />}
+            {<SavedItems details={Saveditemfilter} type={"favourite"} />}
         </div>
 
     );

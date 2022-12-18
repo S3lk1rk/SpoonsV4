@@ -8,12 +8,22 @@ const Item = ({ food }) => {
 
   return (
     <div>
-        <h4>{food.name}</h4>
-        <p>Description of the dish: {food.description}</p>
-        <p>Allergies to be aware of: {food.allergens}</p>
-        <button onClick={() => SetOpenNutrition(!OpenNutrition)}>Display nutritional information</button>
-        {OpenNutrition && <FetchNutrition query={food.name} />}
-        <button onClick={() => { food.menu.splice(0, food.menu.length) }}> Remove from Menu </button>
+      <h4>{food.name}</h4>
+      <p>Description of the dish: {food.description}</p>
+
+      <p>Full cooking method</p>
+      <ol>
+          {food.FullMethod.map((fullers,fulton) => (
+            <li key={fulton}>
+            {fullers}
+            </li>
+          ))}
+        </ol>
+
+      <p>Allergies to be aware of: {food.AllergyTrigger}</p>
+      <button onClick={() => SetOpenNutrition(!OpenNutrition)}>Display/Hide nutritional information</button>
+      {OpenNutrition && <FetchNutrition query={food.name} />}
+      <button onClick={() => { food.Saveditem.splice(0, food.Saveditem.length) }}> Remove from Saveditem </button>
     </div>
   );
 };
